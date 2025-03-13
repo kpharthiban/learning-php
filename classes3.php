@@ -10,10 +10,11 @@ class BankAccount {
         return $this->balance;
     }
 
-    public function deposit(float $amount): void {
+    public function deposit(float $amount): mixed {
         if ($amount > 0) {
             $this->balance += $amount;
         }
+        return $this->balance;
     }
 
     public function withdraw(float $amount): bool {
